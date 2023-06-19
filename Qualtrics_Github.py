@@ -12,7 +12,7 @@ def download_qualtrics(api_token, data_center, survey_id, output_path, file_form
         "X-API-TOKEN": api_token,
     }
     data = {"format": file_format, 
-            "useLabels":True, #use this if you don't want text responses instead of numeric code default is False.
+            "useLabels":True, #use this if you want text responses instead of numeric code values; the default is False.
             "timeZone": "America/New_York"}
     
     response = requests.post(base_url, headers=headers, json=data)
